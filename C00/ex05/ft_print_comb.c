@@ -23,5 +23,9 @@ void    ft_print_comb(void);
     while(a <= 7)
     {
 	    b = a + 1;
-	    while 
+	    while(b <=8)
+	    {
+		    c = b;
+		    while(c <=9)
+		    {
 }
