@@ -23,6 +23,17 @@ void	ft_putspc(void)
 	ft_putchar(' ');
 }
 
+void ft_ans (char s, char u, char p)
+{
+	ft_putchar(s);
+	ft_putchar(u);
+	ft_putchar(p);
+	if (s == '7' && u == '8' && p == '9')
+		return;
+	else
+		ft_putspc();
+}
+
 void	ft_print_comb(void)
 {
 	char	s;
@@ -38,21 +49,16 @@ void	ft_print_comb(void)
 			p = u + 1;
 			while (p <= '9')
 			{
-				ft_putchar(s);
-				ft_putchar(u);
-				ft_putchar(p);
+				ft_ans(s, u, p);
 				p++;
-				ft_putspc();
 			}
 			u++;
 		}
 		s++;
 	}
 }
-
 /*
 int	main(void)
 {
 	ft_print_comb();
-}
-*/
+}*/
