@@ -6,13 +6,13 @@ int main(void){
     /*ASCII code for 0*/
     num1 = 48;
 
-    while (num1 < 58)
+    while (num1 < 56)
     {
-        num2=48;
+        num2=49;
 
-        while (num2 < 58)
+        while (num2 < 57)
         {
-            num3=48;
+            num3=50;
 
             while (num3 <58)
             {
@@ -20,7 +20,6 @@ int main(void){
                 putchar(num2);
                 putchar(num3);
                 num3++;
-                putchar(',');
                 putchar(' ');
             }
             
@@ -31,5 +30,4 @@ int main(void){
     }
     putchar('\n');
     return (0);
-
 }
