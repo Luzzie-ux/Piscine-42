@@ -23,13 +23,13 @@ void	ft_putspc(void)
 	ft_putchar(' ');
 }
 
-void ft_ans (char s, char u, char p)
+void	ft_ans(char s, char u, char p)
 {
 	ft_putchar(s);
 	ft_putchar(u);
 	ft_putchar(p);
 	if (s == '7' && u == '8' && p == '9')
-		return;
+		return ;
 	else
 		ft_putspc();
 }
