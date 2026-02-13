@@ -10,40 +10,35 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-// JavaScript program for Fizz Buzz Problem 
-// by checking every integer individually
+#include <stdio.h>
+#include <stdlib.h>
 
-function fizzBuzz(n) {
-    let res = [];
-
-    for (let i = 1; i <= n; ++i) {
-    
+void fizzBuzz(int n) {
+    for (int i = 1; i <= n; ++i) {
         // Check if i is divisible by both 3 and 5
-        if (i % 3 === 0 && i % 5 === 0) {
-        
-            // Add "FizzBuzz" to the result array
-            res.push("FizzBuzz");
+        if (i % 3 == 0 && i % 5 == 0) {
+            // Print "FizzBuzz"
+            printf("FizzBuzz ");
         } 
-        
         // Check if i is divisible by 3
-        else if (i % 3 === 0) {
-        
-            // Add "Fizz" to the result array
-            res.push("Fizz");
+        else if (i % 3 == 0) {
+            // Print "Fizz"
+            printf("Fizz ");
         } 
-        
         // Check if i is divisible by 5
-        else if (i % 5 === 0) {
-        
-            // Add "Buzz" to the result array
-            res.push("Buzz");
+        else if (i % 5 == 0) {
+            // Print "Buzz"
+            printf("Buzz ");
         } 
         else {
-        
-            // Add the current number as a string to the
-            // result array
-            res.push(i.toString());
+            // Print the current number
+            printf("%d ", i);
         }
     }
-    return res;
+}
+
+int main() {
+    int n = 100;
+    fizzBuzz(n);
+    return 0;
 }
