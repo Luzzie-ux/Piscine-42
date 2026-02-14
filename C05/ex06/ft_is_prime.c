@@ -6,7 +6,7 @@
 /*   By: rodrpere <rodrpere@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/14 15:01:01 by rodrpere          #+#    #+#             */
-/*   Updated: 2026/02/14 15:32:17 by rodrpere         ###   ########.fr       */
+/*   Updated: 2026/02/14 15:37:20 by rodrpere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_is_prime(int nb)
 {
-	int div;
+	int	div;
 
 	div = 2;
 	if (nb <= 1)
@@ -28,7 +28,7 @@ int	ft_is_prime(int nb)
 	return (1);
 }
 
-int main (void)
+/*int main (void)
 {
 	int n;
 	printf("Choose a number: ");
@@ -36,4 +36,4 @@ int main (void)
 	int result = ft_is_prime(n);
 	
 	printf("%d is prime: %d", n, result);
-}
+}*/
