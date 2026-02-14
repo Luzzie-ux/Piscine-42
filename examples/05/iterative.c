@@ -6,11 +6,11 @@
 /*   By: rodrpere <rodrpere@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/12 14:19:58 by rodrpere          #+#    #+#             */
-/*   Updated: 2026/02/12 16:07:50 by rodrpere         ###   ########.fr       */
+/*   Updated: 2026/02/14 12:53:45 by rodrpere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include <stdio.h> //iterative factorial
 #include <stdlib.h>
 
 int	main(void)

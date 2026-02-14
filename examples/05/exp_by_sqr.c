@@ -6,11 +6,11 @@
 /*   By: rodrpere <rodrpere@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/13 10:43:24 by rodrpere          #+#    #+#             */
-/*   Updated: 2026/02/13 11:27:40 by rodrpere         ###   ########.fr       */
+/*   Updated: 2026/02/14 12:54:40 by rodrpere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include <unistd.h> //recursive power using exponentiation by squaring
 #include <stdio.h>
 
 int	exp_by_sqr(int x, int n) // will break if it the n is bigger than 32

@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   recursive.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rodrpere <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: rodrpere <rodrpere@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/12 14:23:11 by rodrpere          #+#    #+#             */
-/*   Updated: 2026/02/12 14:31:54 by rodrpere         ###   ########.fr       */
+/*   Updated: 2026/02/14 12:53:54 by rodrpere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include <stdio.h> //recursive factorial
 
 int	main(void)
 {
