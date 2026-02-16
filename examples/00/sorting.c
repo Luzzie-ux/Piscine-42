@@ -6,7 +6,7 @@
 /*   By: rodrpere <rodrpere@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/09 12:46:26 by rodrpere          #+#    #+#             */
-/*   Updated: 2026/02/09 12:57:25 by rodrpere         ###   ########.fr       */
+/*   Updated: 2026/02/16 20:20:23 by rodrpere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,10 @@ void	sort(int array[], int size)
 				int temp = array[j];
 				array[j] = array[j+1];
 				array[j+1] = temp;
-
 			}
-
+			j++;
 		}
+		i++;
 	}
 }
 

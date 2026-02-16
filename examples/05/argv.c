@@ -1,31 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_program_name.c                            :+:      :+:    :+:   */
+/*   argv.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rodrpere <rodrpere@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/16 14:56:20 by rodrpere          #+#    #+#             */
-/*   Updated: 2026/02/16 19:34:13 by rodrpere         ###   ########.fr       */
+/*   Created: 2026/02/16 19:30:46 by rodrpere          #+#    #+#             */
+/*   Updated: 2026/02/16 19:30:53 by rodrpere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-int	ft_strlen(char *str)
+int ft_strlen(char *str)
 {
-	int	i;
-
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
+    int i = 0;
+    while (str[i])
+        i++;
+    return (i);
 }
 
-int	main(int argc, char **argv)
+int main(int argc, char **argv)
 {
-	(void)argc;
-	write(1, argv[0], ft_strlen(argv[0]));
-	write(1, "\n", 1);
-	return (0);
+    int i;
+    
+    i = 0;
+    while (i < argc)
+    {
+        write(1, "Arg ", 4);
+        write(1, &(char){'0' + i}, 1);  // Print index
+        write(1, ": ", 2);
+        write(1, argv[i], ft_strlen(argv[i]));
+        write(1, "\n", 1);
+        i++;
+    }
+    
+    return (0);
 }
