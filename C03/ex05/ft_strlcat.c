@@ -6,7 +6,7 @@
 /*   By: rodrpere <rodrpere@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/11 12:49:03 by rodrpere          #+#    #+#             */
-/*   Updated: 2026/02/11 18:10:35 by rodrpere         ###   ########.fr       */
+/*   Updated: 2026/02/16 11:10:06 by rodrpere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ int	ft_strlen(char *str)
 	int	i;
 
 	i = 0;
+	if (!str)
+		return (0);
 	while (str[i])
 		i++;
 	return (i);
@@ -24,39 +26,37 @@ int	ft_strlen(char *str)
 
 unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 {
-	size_t	i;
-	size_t	dlen;
+	unsigned int	i;
+	unsigned int	dlen;
+	unsigned int	slen;
 
-	i = 0;
 	dlen = ft_strlen(dest);
-	if (!src || !*src)
+	slen = ft_strlen(src);
+	if (size == 0)
+		return (ft_strlen(src));
+	if (size <= dlen)
+		return (size + slen);
+	if (!dest || !src)
 		return (dlen);
-	while (i < size - dlen - 1 && src[i])
+	i = 0;
+	while (i < size - dlen - 1 && src[i] != '\0')
 	{
-		dest[i + dlen] = src[i];
+		dest[dlen + i] = src[i];
 		i++;
 	}
-	dest[i + dlen] = 0;
-	return (i + dlen);
+	dest[dlen + i] = '\0';
+	return (dlen + slen);
 }
 
 /*#include <stdio.h>
-#define MAXS 32
-
-int	main(int argc, char **argv)
+int	main(void)
 {
-	size_t n = 0, sz1 = 0;   
-    char str[MAXS] = "",
-        *s1 = argc > 1 ? argv[1] : "hello",    
-        *s2 = argc > 2 ? argv[2] : "world";    
+	char	s1[10] = "Hello";
+	char	s2[] = "World";
+	unsigned int result = ft_strlcat(s1, s2, 7);
 
-    printf ("\nconcatenating empty src with\ns1: %s\ns2: %s\n\n", s1, s2);
+	printf ("\nconcatenating empty src with\ns1: %s\ns2: %s\n\n", s1, s2);
+	printf ("Result: %u\n", result);
 
-    sz1 = ft_strlcat (str, s1, MAXS);   
-    printf ("after 'strlcat (str, s1, n)', str : %s  (%zu chars)\n", str, sz1);
-
-    n = ft_strlcat (str, s2, MAXS);       
-    printf ("after 'strlcat (str, s2, n)', str : %s  (%zu chars)\n", str, n);
-
-    return 0;
-} */
+	return (0);
+}*/

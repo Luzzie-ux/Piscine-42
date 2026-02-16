@@ -1,30 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_print_program_name.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rodrpere <rodrpere@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/11 20:00:00 by rodrpere          #+#    #+#             */
-/*   Updated: 2026/02/16 12:22:21 by rodrpere         ###   ########.fr       */
+/*   Created: 2026/02/16 14:56:20 by rodrpere          #+#    #+#             */
+/*   Updated: 2026/02/16 15:01:50 by rodrpere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_putstr(char *str)
+int	main(int argc, char *argv[])
 {
-	int	i;
-
-	i = 0;
-	while (str[i])
-		i++;
-	write (1, str, i);
+	while (argv != "\0")
+	{
+		argv++;
+		if (argv == '\0')
+			write(1, argv, 1);
+	}
+	return (0);
+	
 }
-
-/*int main(void)
-{
-	ft_putstr("Hello World\n");
-	ft_putstr("BEE\n");
-	ft_putstr("1");
-}*/
