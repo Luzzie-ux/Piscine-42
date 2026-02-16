@@ -6,7 +6,7 @@
 /*   By: rodrpere <rodrpere@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/11 20:03:22 by rodrpere          #+#    #+#             */
-/*   Updated: 2026/02/11 21:24:10 by rodrpere         ###   ########.fr       */
+/*   Updated: 2026/02/16 13:17:22 by rodrpere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,3 +49,14 @@ int	ft_atoi(char *str)
 	}
 	return (n * sign);
 }
+
+/*#include <stdio.h>
+int main (void)
+{
+	char	str[] = "12345";
+	int	num;
+
+	num = ft_atoi(str);
+	printf("\nAtoi is: %d", num);
+	printf("");
+}*/

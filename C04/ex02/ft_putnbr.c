@@ -6,7 +6,7 @@
 /*   By: rodrpere <rodrpere@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/11 20:00:09 by rodrpere          #+#    #+#             */
-/*   Updated: 2026/02/11 21:28:28 by rodrpere         ###   ########.fr       */
+/*   Updated: 2026/02/16 13:27:51 by rodrpere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,9 +34,10 @@ void	ft_putnbr(int nb)
 		ft_putchar(nb + '0');
 	}
 }
-/*
-int main(void)
+
+/*int main(void)
 {
 	ft_putnbr(42);
-}
-*/
+	ft_putnbr(0);
+	ft_putnbr(-42);
+}*/
