@@ -6,7 +6,7 @@
 /*   By: rodrpere <rodrpere@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/11 20:00:09 by rodrpere          #+#    #+#             */
-/*   Updated: 2026/02/16 13:27:51 by rodrpere         ###   ########.fr       */
+/*   Updated: 2026/02/16 13:59:28 by rodrpere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,11 @@ void	ft_putchar(char c)
 
 void	ft_putnbr(int nb)
 {
-	if (nb < 0)
+	if (nb == -2147483648)
+	{
+		write(1, "-2147483648", 11);
+	}
+	else if (nb < 0)
 	{
 		ft_putchar('-');
 		ft_putnbr(-nb);
@@ -35,9 +39,11 @@ void	ft_putnbr(int nb)
 	}
 }
 
-/*int main(void)
+int main(void)
 {
+	ft_putnbr(2147483648);
 	ft_putnbr(42);
 	ft_putnbr(0);
 	ft_putnbr(-42);
-}*/
+	ft_putnbr(-2147483648);
+}
