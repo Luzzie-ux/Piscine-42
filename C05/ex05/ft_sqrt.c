@@ -6,7 +6,7 @@
 /*   By: rodrpere <rodrpere@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/13 20:54:29 by rodrpere          #+#    #+#             */
-/*   Updated: 2026/02/14 15:38:22 by rodrpere         ###   ########.fr       */
+/*   Updated: 2026/02/16 11:46:54 by rodrpere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int	ft_sqrt(int nb)
 
 	if (nb < 0)
 		return (0);
-	if (nb == 0 && nb == 1)
+	if (nb == 0 || nb == 1)
 		return (nb);
 	start = 1;
 	end = nb;
