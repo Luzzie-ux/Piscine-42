@@ -6,7 +6,7 @@
 /*   By: rodrpere <rodrpere@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/16 20:10:29 by rodrpere          #+#    #+#             */
-/*   Updated: 2026/02/16 20:37:42 by rodrpere         ###   ########.fr       */
+/*   Updated: 2026/02/16 22:17:12 by rodrpere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,9 @@ int	ft_strcmp(char *s1, char *s2)
 
 void	sort(char **array, int size)
 {
-	int	i;
-	int	j;
 	char	*temp;
+	int		i;
+	int		j;
 
 	i = 0;
 	while (i < size - 1)
