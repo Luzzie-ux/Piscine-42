@@ -6,7 +6,7 @@
 /*   By: rodrpere <rodrpere@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/11 12:48:58 by rodrpere          #+#    #+#             */
-/*   Updated: 2026/02/11 18:08:13 by rodrpere         ###   ########.fr       */
+/*   Updated: 2026/02/14 15:40:44 by rodrpere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,7 @@ char	*ft_strstr(char *str, char *to_find)
 	{
 		while (to_find[j] == str[i + j])
 		{
-			if (to_find[j] == str[i])
+			if (to_find[j] == str[j])
 				return (&str[i]);
 			j++;
 		}
