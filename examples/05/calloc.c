@@ -6,7 +6,7 @@
 /*   By: rodrpere <rodrpere@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/17 15:55:46 by rodrpere          #+#    #+#             */
-/*   Updated: 2026/02/17 16:06:29 by rodrpere         ###   ########.fr       */
+/*   Updated: 2026/02/17 18:05:40 by rodrpere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int main(void) //calloc and malloc work the same
 	printf("\n");
 	printf("a: %p\n", a);
 
-	int *save = a;
+	int *save = a; //program stops controlling the space
 	free(a);
 		printf("save: %p\n", save);
 	for (int i = 0; i < 0; i++)

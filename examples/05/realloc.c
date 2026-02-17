@@ -6,7 +6,7 @@
 /*   By: rodrpere <rodrpere@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/17 16:09:00 by rodrpere          #+#    #+#             */
-/*   Updated: 2026/02/17 16:12:22 by rodrpere         ###   ########.fr       */
+/*   Updated: 2026/02/17 18:10:47 by rodrpere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,13 @@ int main(void)
 	printf("\n");
 	printf("a: %p\n", a);
 
-	a = realloc(a, sizeof(int) * (size + 5));
+	a = realloc(a, sizeof(int) * (size + 5)); //can reallocate more space
+
+	for (int i = size; i < (size+5); i++) a[i] = 9;
+
+	for (int i = size; i < (size+5); i++)
+		printf("[%d] = %d\n", i, a[i]);
+	printf("\n");
 	free(a);
 
 	return 0;
