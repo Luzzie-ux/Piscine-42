@@ -6,7 +6,7 @@
 /*   By: rodrpere <rodrpere@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/17 11:29:30 by rodrpere          #+#    #+#             */
-/*   Updated: 2026/02/17 14:10:14 by rodrpere         ###   ########.fr       */
+/*   Updated: 2026/02/17 17:59:54 by rodrpere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,3 +81,17 @@ void	ft_putnbr_base(int nbr, char *base)
 	}
 	breakdown(n, base, blen);
 }
+
+/*int	main(void)
+{
+	ft_putnbr_base(123, "a");
+	write(1, "\n", 1);
+	ft_putnbr_base(2147483647, "0123456789abcdef");
+	write(1, "\n", 1);
+	ft_putnbr_base(-2147483648, "01");
+	write(1, "\n", 1);
+	ft_putnbr_base(40, "poneyvif");
+	write(1, "\n", 1);
+	ft_putnbr_base(12345, "0123456789");
+	write(1, "\n", 1);
+}*/
