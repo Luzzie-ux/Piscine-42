@@ -1,24 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   malloc.c                                           :+:      :+:    :+:   */
+/*   realloc.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rodrpere <rodrpere@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/17 15:20:15 by rodrpere          #+#    #+#             */
-/*   Updated: 2026/02/17 15:54:10 by rodrpere         ###   ########.fr       */
+/*   Created: 2026/02/17 16:09:00 by rodrpere          #+#    #+#             */
+/*   Updated: 2026/02/17 16:12:22 by rodrpere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include <stdio.h>
 
-void	memory_hog(int size);
-
-int	main(void) //function that will request a block of memory on the heap
+int main(void)
 {
-	//since we dont know, we allocate space for 10 ints
-	int *a = malloc(sizeof(int) * 10);
+	int size = 0;
+	printf("Enter size:");
+	scanf("%d", &size);
+
+	int *a = alloc(size, sizeof(int));
 
 	for (int i = 0; i < 10; i++) a[i] = 10 - i;
 	
@@ -27,16 +28,8 @@ int	main(void) //function that will request a block of memory on the heap
 	printf("\n");
 	printf("a: %p\n", a);
 
-	//we have to remember to free the space after using a malloc
+	a = realloc(a, sizeof(int) * (size + 5));
 	free(a);
 
-	//while (1) memory_hog(128000);
 	return 0;
-}
-
-/*its good to remember memory leaks happens if we forget to free the space,
-if the heap's full, since we requested all the memory it could give*/
-void	memory_hog(int size)
-{
-	int *a = malloc(size);
 }

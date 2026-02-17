@@ -1,24 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   malloc.c                                           :+:      :+:    :+:   */
+/*   calloc.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rodrpere <rodrpere@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/17 15:20:15 by rodrpere          #+#    #+#             */
-/*   Updated: 2026/02/17 15:54:10 by rodrpere         ###   ########.fr       */
+/*   Created: 2026/02/17 15:55:46 by rodrpere          #+#    #+#             */
+/*   Updated: 2026/02/17 16:06:29 by rodrpere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include <stdio.h>
 
-void	memory_hog(int size);
-
-int	main(void) //function that will request a block of memory on the heap
+int main(void) //calloc and malloc work the same 
 {
-	//since we dont know, we allocate space for 10 ints
-	int *a = malloc(sizeof(int) * 10);
+	//the main difference is that the memory was already zero there
+	int *a = calloc(10, sizeof(int));
 
 	for (int i = 0; i < 10; i++) a[i] = 10 - i;
 	
@@ -27,16 +25,14 @@ int	main(void) //function that will request a block of memory on the heap
 	printf("\n");
 	printf("a: %p\n", a);
 
-	//we have to remember to free the space after using a malloc
+	int *save = a;
 	free(a);
+		printf("save: %p\n", save);
+	for (int i = 0; i < 0; i++)
+		printf("save[%d] = %d\n", i, save[i]);
+	printf("\n");
 
-	//while (1) memory_hog(128000);
 	return 0;
 }
-
-/*its good to remember memory leaks happens if we forget to free the space,
-if the heap's full, since we requested all the memory it could give*/
-void	memory_hog(int size)
-{
-	int *a = malloc(size);
-}
+/*If we have a long running program, calloc might be more useful*/
+/*because malloc doesnt set it zero, but calloc does*/
