@@ -6,7 +6,7 @@
 /*   By: rodrpere <rodrpere@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/11 20:00:09 by rodrpere          #+#    #+#             */
-/*   Updated: 2026/02/17 10:35:54 by rodrpere         ###   ########.fr       */
+/*   Updated: 2026/02/17 11:52:31 by rodrpere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ void	ft_putnbr(int nb)
 
 /*int main(void)
 {
-	ft_putnbr(2147483648);
+	ft_putnbr(2147483647);
 	ft_putnbr(42);
 	ft_putnbr(0);
 	ft_putnbr(-42);
