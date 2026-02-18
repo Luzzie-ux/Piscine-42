@@ -6,7 +6,7 @@
 /*   By: rodrpere <rodrpere@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/18 10:52:28 by rodrpere          #+#    #+#             */
-/*   Updated: 2026/02/18 10:53:15 by rodrpere         ###   ########.fr       */
+/*   Updated: 2026/02/18 12:08:09 by rodrpere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,5 +15,18 @@
 
 char	*ft_strdup(char *src)
 {
-	
+	char	*str;
+	char	*p;
+	int	len;
+
+	len = 0;
+	while (src[len])
+		len++;
+	str = malloc(len+1);
+	p = str;
+	while (*src)
+		*p++ = *src++;
+	*p = '\0';
+	return (str);
+	free(p);
 }
