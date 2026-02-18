@@ -1,39 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_is_prime.c                                      :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rodrpere <rodrpere@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/14 15:01:01 by rodrpere          #+#    #+#             */
-/*   Updated: 2026/02/18 11:42:42 by rodrpere         ###   ########.fr       */
+/*   Created: 2026/02/18 10:52:28 by rodrpere          #+#    #+#             */
+/*   Updated: 2026/02/18 10:53:15 by rodrpere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
+#include <stdlib.h>
 
-int	ft_is_prime(int nb)
+char	*ft_strdup(char *src)
 {
-	int	div;
-
-	div = 2;
-	if (nb <= 1)
-		return (0);
-	while (div < nb)
-	{
-		if (nb % div == 0)
-			return (0);
-		div++;
-	}
-	return (1);
-}
-
-/*int main (void)
-{
-	int n;
-	printf("Choose a number: ");
-	scanf("%d", &n);
-	int result = ft_is_prime(n);
 	
-	printf("%d is prime: %d", n, result);
-}*/
+}
