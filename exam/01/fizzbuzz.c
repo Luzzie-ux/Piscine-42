@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   fizzbuzz.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rodrpere <rodrpere@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/10 15:01:41 by rodrpere          #+#    #+#             */
-/*   Updated: 2026/02/19 11:41:17 by rodrpere         ###   ########.fr       */
+/*   Created: 2026/02/19 13:45:18 by rodrpere          #+#    #+#             */
+/*   Updated: 2026/02/19 15:47:40 by rodrpere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,26 +17,41 @@ void	ft_putchar(char c)
 	write(1, &c, 1);
 }
 
-void	ft_putnbr(int nbr)
+void	ft_putnbr(int nb)
 {
-	if (nbr < 0)
+	if (nb > 9)
 	{
-		ft_putchar('-');
-		ft_putnbr(nbr);
-	}
-	else if (nbr > 9)
-	{
-		ft_putnbr(nbr /10);
-		ft_putnbr(nbr % 10);
+		ft_putnbr(nb / 10);
+		ft_putnbr(nb % 10);
 	}
 	else
+		ft_putchar(nb + '0');
+}
+
+void	ft_fizzbuzz(int nb)
+{
+	int	i;
+
+	i = 1;
+	while (i <= 100)
 	{
-		ft_putchar(nbr + '0');
+		if (i % 3 == 0 && i % 5 == 0)
+			write(1, "fizzbuzz", 9);
+		else if (i % 3 == 0)
+			write(1, "fizz", 5);
+		else if (i % 5 == 0)
+			write(1, "buzz", 5);
+		else
+			ft_putnbr(i);
+				nb--;
+		write(1, "\n", 1);
+		i++;
 	}
 }
-/*
-int main(void)
+
+int	main(void)
 {
-	ft_putnbr(42);
+	int nb = 100;
+	ft_fizzbuzz(nb);
+	return (0);
 }
-*/

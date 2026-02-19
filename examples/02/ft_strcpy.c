@@ -3,27 +3,46 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rodrpere <rodrpere@student.42porto.com>    +#+  +:+       +#+        */
+/*   By: rodrpere <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/09 17:51:22 by rodrpere          #+#    #+#             */
-/*   Updated: 2026/02/09 18:44:30 by rodrpere         ###   ########.fr       */
+/*   Created: 2026/02/19 10:56:45 by rodrpere          #+#    #+#             */
+/*   Updated: 2026/02/19 11:05:08 by rodrpere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// the idea behind this function is to make a copy of what is one strong to another,
-// to understand how exactly the function strcpy works for real 
-char	*ft_strcpy(char *dest, char *src) //step by step way of making a strcpy
+#include <unistd.h>
+
+char	*ft_strcpy(char *s1, char *s2)
 {
-	char *start = dest; // the start adress is saved on the destination 
+	int	i;
 
-	while (*src != '\0') // until we hit source being NULL, keep the loop running
+	i = 0;
+	while (s2[i] != '\0')
 	{
-		*dest = *src; //takes the char on src and copies into the memory pointed bydest
-		dest++; // moves the dest pointer forward
-		src++; // moves the src pointer forward
+		s1[i] = s2[i];
+		i++;
 	}
-	*dest = '\0'; //marks the dest as null when the while loop ends
-
-	return start; //returns the starting destination address
+	s1[i] = '\0';
+	return (s1);
 }
 
+#include <stdio.h>
+#include <string.h>
+
+int	main (void)
+{
+	char	s1[] = "Luzzie";
+	char	s2[] = "Rodrigo";
+	char	s3[] = "Nerevar";
+	char	s4[] = "Voryn";
+
+	printf("%s\n", s1);
+	ft_strcpy(s1,s2);
+	printf("%s\n", s1);
+	
+	printf("%s\n", s3);
+        strcpy(s3,s4);
+        printf("%s\n", s3);
+
+	return (0);
+}	

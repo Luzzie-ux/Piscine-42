@@ -1,42 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   strlen.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rodrpere <rodrpere@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/10 15:01:41 by rodrpere          #+#    #+#             */
-/*   Updated: 2026/02/19 11:41:17 by rodrpere         ###   ########.fr       */
+/*   Created: 2026/02/19 15:56:07 by rodrpere          #+#    #+#             */
+/*   Updated: 2026/02/19 15:57:40 by rodrpere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_putchar(char c)
+int	ft_strlen(char *str)
 {
-	write(1, &c, 1);
-}
+	int	i;
 
-void	ft_putnbr(int nbr)
-{
-	if (nbr < 0)
-	{
-		ft_putchar('-');
-		ft_putnbr(nbr);
-	}
-	else if (nbr > 9)
-	{
-		ft_putnbr(nbr /10);
-		ft_putnbr(nbr % 10);
-	}
-	else
-	{
-		ft_putchar(nbr + '0');
-	}
+	i = 0;
+	while (str[i])
+		i++;
+	return (i);
 }
-/*
-int main(void)
-{
-	ft_putnbr(42);
-}
-*/

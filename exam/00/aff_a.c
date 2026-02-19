@@ -1,42 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   aff_a.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rodrpere <rodrpere@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/10 15:01:41 by rodrpere          #+#    #+#             */
-/*   Updated: 2026/02/19 11:41:17 by rodrpere         ###   ########.fr       */
+/*   Created: 2026/02/19 12:12:24 by rodrpere          #+#    #+#             */
+/*   Updated: 2026/02/19 12:25:55 by rodrpere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_putchar(char c)
+int	main(int argc, char **argv)
 {
-	write(1, &c, 1);
-}
-
-void	ft_putnbr(int nbr)
-{
-	if (nbr < 0)
+	if (argc != 2)
+		write (1, "a", 1);
+	else 
 	{
-		ft_putchar('-');
-		ft_putnbr(nbr);
+		while (*argv[1])
+		{
+			if (*argv[1] == 'a')
+			{
+				write (1, "a", 1);
+				break;
+			}
+			argv[1]++;
+		}
 	}
-	else if (nbr > 9)
-	{
-		ft_putnbr(nbr /10);
-		ft_putnbr(nbr % 10);
-	}
-	else
-	{
-		ft_putchar(nbr + '0');
-	}
+	write(1, "\n", 1);
+	return (0);
 }
-/*
-int main(void)
-{
-	ft_putnbr(42);
-}
-*/

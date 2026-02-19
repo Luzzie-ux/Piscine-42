@@ -24,5 +24,6 @@ int	main(void)
 			write(1, &temp, 1);
 		}
 		counter--;
-        }	
+        }
+	return (0);	
 }

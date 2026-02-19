@@ -3,15 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   fizzbuzz.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rodrpere <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: rodrpere <rodrpere@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/13 13:59:40 by rodrpere          #+#    #+#             */
-/*   Updated: 2026/02/13 14:00:04 by rodrpere         ###   ########.fr       */
+/*   Updated: 2026/02/19 15:39:08 by rodrpere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
-#include <stdlib.h>
+
+
 
 void fizzBuzz(int n) {
     for (int i = 1; i <= n; ++i) {

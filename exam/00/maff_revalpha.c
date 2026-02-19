@@ -1,42 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   maff_revalpha.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rodrpere <rodrpere@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/10 15:01:41 by rodrpere          #+#    #+#             */
-/*   Updated: 2026/02/19 11:41:17 by rodrpere         ###   ########.fr       */
+/*   Created: 2026/02/19 12:56:31 by rodrpere          #+#    #+#             */
+/*   Updated: 2026/02/19 13:02:53 by rodrpere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_putchar(char c)
+void	ft_revalpha(void)
 {
-	write(1, &c, 1);
+	char	counter;
+	char	temp;
+
+	counter = 'z';
+	while (counter >= 'a')
+	{
+		if (counter % 2 == 0) //for odds change to 1 
+		{
+			temp = counter - 32;
+			write(1, &temp, 1);
+		}
+		else
+		{
+			write(1, &counter, 1);
+		}
+		counter--;
+	}
 }
 
-void	ft_putnbr(int nbr)
+int	main(void)
 {
-	if (nbr < 0)
-	{
-		ft_putchar('-');
-		ft_putnbr(nbr);
-	}
-	else if (nbr > 9)
-	{
-		ft_putnbr(nbr /10);
-		ft_putnbr(nbr % 10);
-	}
-	else
-	{
-		ft_putchar(nbr + '0');
-	}
+	ft_revalpha();
 }
-/*
-int main(void)
-{
-	ft_putnbr(42);
-}
-*/

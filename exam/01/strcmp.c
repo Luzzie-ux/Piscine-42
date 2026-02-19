@@ -1,42 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   strcmp.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rodrpere <rodrpere@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/10 15:01:41 by rodrpere          #+#    #+#             */
-/*   Updated: 2026/02/19 11:41:17 by rodrpere         ###   ########.fr       */
+/*   Created: 2026/02/19 15:59:35 by rodrpere          #+#    #+#             */
+/*   Updated: 2026/02/19 16:01:27 by rodrpere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_putchar(char c)
+int	ft_strcmp(char *s1, char *s2)
 {
-	write(1, &c, 1);
-}
+	int	i;
 
-void	ft_putnbr(int nbr)
-{
-	if (nbr < 0)
+	i = 0;
+	while (s1[i] == s2[i] && s1[i] != '\0' && s2[i] != '\0')
 	{
-		ft_putchar('-');
-		ft_putnbr(nbr);
+		i++;
 	}
-	else if (nbr > 9)
-	{
-		ft_putnbr(nbr /10);
-		ft_putnbr(nbr % 10);
-	}
-	else
-	{
-		ft_putchar(nbr + '0');
-	}
+	return((unsigned char)s1[i] - (unsigned char)s2[i]);
 }
-/*
-int main(void)
-{
-	ft_putnbr(42);
-}
-*/
